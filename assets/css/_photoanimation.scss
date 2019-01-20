@@ -1,18 +1,29 @@
 /* photo animation  */
 #photoanimation {
   //display: none;
-}
 
-#photoanimation::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: calc(50% - 2.5px);
-  left: 0;
-  width: 0%;
-  height: 5px;
-  background-color: var(--orange);
-  animation: close 1s ease 10.5s forwards;
+  &::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: 95%;
+    border: 4px var(--orange) dashed;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: calc(50% - 2.5px);
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background-color: var(--orange);
+    animation: close 1s ease 10.5s forwards;
+  }
 }
 
 @keyframes close {
