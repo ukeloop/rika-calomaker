@@ -5,9 +5,38 @@
     <meta http-equiv="content-language" content="ja">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta property="og:site_name" content="rika-calomaker">
+    <meta property="og:title" content="rika-calomaker">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ukeloop.github.io/rika-calomaker/">
+    <meta property="og:image" content="./assets/img/og.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="https://ukeloop.github.io/rika-calomaker/">
+    <meta name="twitter:image" content="./assets/img/og.jpg">
     <title>rika-calomaker</title>
+    <link rel="manifest" href="./manifest.json">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="apple-touch-icon" href="./assets/img/icons/apple-touch-icon-192x192.png" sizes="192x192">
+    <link rel="apple-touch-startup-image" href="./assets/img/launch.jpg">
+    <link rel="preload" href="./assets/img/loading.gif" as="image">
+    <link rel="preload" href="./assets/img/photo1.jpg" as="image">
+    <link rel="preload" href="./assets/img/photo2.jpg" as="image">
+    <link rel="preload" href="./assets/img/photo3.jpg" as="image">
+    <link rel="preload" href="./assets/img/photo4.jpg" as="image">
+    <link rel="preload" href="./assets/img/photo5.jpg" as="image">
+    <link rel="preload" href="./assets/img/photo6.jpg" as="image">
+    <link rel="preload" href="./assets/img/bg_2x.jpg" as="image">
+    <link rel="preload" href="./assets/img/bg.jpg" as="image">
+    <link rel="preload" href="./assets/img/view.jpg" as="image">
+    <link rel="preload" href="./assets/img/emblem.jpg" as="image">
+    <link rel="preload" href="./assets/css/style.min.css" as="style">
+    <link rel="preload" href="./assets/js/script.min.js" as="script">
     <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.min.css" />
   </head>
   <body>
     <main>
@@ -18,7 +47,7 @@
         <div class="photo">
           <img src="./assets/img/photo1.jpg">
           <img src="./assets/img/photo2.jpg">
-          <img src="./assets/img/photo3.png">
+          <img src="./assets/img/photo3.jpg">
           <img src="./assets/img/photo4.jpg">
           <img src="./assets/img/photo5.jpg">
           <img src="./assets/img/photo6.jpg">
@@ -26,7 +55,7 @@
       </section>
       <section id="copyanimation" class="bg">
         <div class="copy">
-          <p>Pくん。アタシのこと、ちゃんと見ててね☆</p>
+          <p>Pくん。アタシのこと、<br class="sp-only">ちゃんと見ててね☆</p>
         </div>
       </section>
       <section id="mainanimation" class="bg">
@@ -40,11 +69,13 @@
         </div>
       </section>
     </main>
-
-    <footer>
-
-    </footer>
-
-    <script src="./assets/js/script.js"></script>
+    <footer></footer>
+    <script>
+    if('serviceWorker' in navigator){
+      navigator.serviceWorker.register('sw.js', { scope: './' })
+     .then(function(){ console.log('Service Worker Registered'); });
+    }
+    </script>
+    <script src="./assets/js/script.min.js"></script>
   </body>
 </html>

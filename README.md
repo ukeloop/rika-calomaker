@@ -1,9 +1,6 @@
 # rika-calomaker
-Animate by CSS.
+![sample](./sample/sample.png)
 
-# Demo
-PC only  
 <https://ukeloop.github.io/rika-calomaker/>
 
-# Sample
-![sample](./sample/sample.png)
+Animate by CSS.
